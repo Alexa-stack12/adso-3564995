@@ -12,7 +12,6 @@
             margin: 0;
             min-height: 100dvh;
             main {
-                border: 4px solid yellow;
                 margin: 0 auto;
                 width: 960px;
                 header {
@@ -23,9 +22,123 @@
                         margin: 2rem auto;
                         width: 170px;
                     }
+                     menu {
+            text-align: center;
+            padding: 0;
+        }
+
+        menu a {
+            display: inline-block;
+            background-color: #07572c;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            width: 100px;
+            padding: 15px 0;
+            margin: 0 5px;
+            border-bottom: 4px solid white;
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+        }
+            } 
+            section {
+                display: flex;
+                justify-content: center;
+                background-color: #07572c;
+                padding: 20px;
+                margin-left: 0;
+                margin-top: 2rem;
+                .sprite {
+                    width: 300px;
+                    height: 190px;
+                    border: 2px solid white;
+                    background: url(imgs/spriteweb.png) no-repeat;
+                    background-position: -465px -7px;
+                    position: relative;
+                }
+                h3 {
+                    margin: 0;
+                    padding: 10px 0;
+                    text-align: center;
+                    font-size: 14px;
+                    color: #000;
+                    text-transform: uppercase;
+                    background-color: #fff9;
+                }
+            }
+            section.sprite {
+                background-color: #07572c;
+                display: block;
+                width: 960px;
+                padding: 10x;
+                margin: 2rem auto 0;
+                box-sizing: border-box;
+
+                div.parent {
+                    background-color: #fff;
+             
+                    padding: 10px 20px;
+                    margin-bottom: 10px;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+
+                    div {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+
+                    div.left,
+                    div.right {
+                        background: url(imgs/spriteweb.png) no-repeat;
+                    }
+
+                    div.left {
+                        width: 80px;    
+                        height: 80px;
+                        background-position: -300px -499px;
+                    }
+
+                    div.right {
+                        width: 150px;     
+                        height: 200px;
+                        background-position: -60px -190px;
+                    }
+
+                    div.text {
+                        width: 570px;
+                        padding: 0 30px;
+                        color: #14532d;
+                        text-align: justify;
+
+                        p {
+                            margin: 0;
+                        }
+                    }
                 }
             }
         }
+    } 
+
+    menu a:hover {
+    border-bottom: 4px solid yellow;
+    }
+
+    footer {
+        background-color: #fff;
+        width: 950px;
+        height: 200px;
+        
+        div.sodas{
+              background: url(imgs/spriteweb.png);
+              background-position: -520 -445;
+        }
+        a{
+
+        }
+    }
     </style>
 </head>
 <body>
@@ -40,6 +153,52 @@
                 <a href="">Contacto</a>
             </menu>
         </header>
+        <section>
+            <div class="sprite">
+                <h3>Sprite 01</h3>
+            </div>
+            <div class="sprite">
+                <h3>Sprite 02</h3>
+            </div>
+            <div class="sprite">
+                <h3>Sprite 03</h3>
+            </div>
+        </section>
+        <section class="sprite">
+            <div class="parent">
+                <div class="left"></div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error consectetur suscipit quibusdam! Debitis autem quod expedita eum? Officiis nulla earum, corrupti recusandae sint animi error! Consequuntur deserunt distinctio architecto reiciendis?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis hic, fugit, deleniti perspiciatis vero, aut distinctio magnam et maxime eius in est. Voluptatem, quae libero harum quia itaque quisquam nemo.</p>
+                </div>
+                <div class="right"></div>
+            </div>
+            <div class="parent">
+                <div class="left"></div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas repellendus eius nesciunt dolorum, illo odit aspernatur ratione non soluta voluptatum obcaecati accusantium ducimus aliquam? Quo laudantium quisquam quas deserunt quia.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, veritatis autem. Aliquid labore inventore alias iure id commodi, nulla quae, mollitia vero ullam atque corrupti adipisci magnam velit. Aut, voluptatem.</p>
+                </div>
+                <div class="right"></div>
+            </div>
+            <div class="parent">
+                <div class="left"></div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sapiente, ducimus sint dolores magnam, eligendi eaque temporibus quo voluptates quibusdam non autem excepturi voluptatum maxime eveniet. Impedit maiores nobis magnam.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dolores sed unde nobis vitae, totam ad excepturi animi! Asperiores amet sint reprehenderit illum, cumque ea praesentium libero distinctio. Obcaecati, suscipit!</p>
+                </div>
+                <div class="right"></div>
+            </div>
+             </section>
+
+             <footer>
+                <div class="sodas"></div>
+                <a href="">inicio</a>
+                <a href="">Nosotros</a>
+                <a href="">Portafolio</a>
+                <a href="">Servicios</a>
+                <a href="">Contacto</a>
+             </footer>
     </main>
 </body>
 </html>
