@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,8 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>38-Media Queries</title>
+
     <style>
+
         * {
+            box-sizing: border-box;
             transition: all 0.4s ease;
         }
 
@@ -15,231 +19,293 @@
             color: #fff;
             font-family: sans-serif;
             padding: 0;
-            margin: 0 auto;
-
-            main {
-                border: 10px solid #fff;
-                padding: 1rem;
-                margin: 2rem auto;
-                width: 1424px;
-
-                header {
-                    figure.logo {
-                        background: url(imgs/titulo.png) no-repeat center;
-                        background-size: 23rem;
-                        padding: 0;
-                        height: 230px;
-                        margin: 0 auto;
-                        width: 320px;
-                    }
-
-                    menu {
-                        margin: 0;
-                        padding: 0;
-
-                        a:is(:link, :visited) {
-                            color: #fff;
-                            font-size: 4rem;
-                            padding: 0.5rem 0.5rem;
-                            display: inline-block;
-                            text-align: center;
-                            text-decoration: none;
-                            font-family: Arial, sans-serif;
-                            width: auto;
-                            height: 700px;
-                            border-radius: 2rem;
-                            margin: 0.5rem;
-                            border-bottom: 6px solid white;
-                            background-size: 23rem;
-                            zoom: 0.5;
-
-                            &:nth-of-type(1) {
-                                background: url(imgs/atardecer1.png) no-repeat center;
-                            }
-
-                            &:nth-of-type(2) {
-                                background: url(imgs/atardecer2.png) no-repeat center;
-                            }
-
-                            &:nth-of-type(3) {
-                                background: url(imgs/atardecer3.png) no-repeat center;
-                            }
-
-                            &:nth-of-type(4) {
-                                background: url(imgs/atardecer4.png) no-repeat center;
-                            }
-
-                            &:hover {
-                                transform: translateY(10px);
-                                color: #fff;
-                            }
-                        }
-                    }
-                }
-
-                section {
-                    div.parent {
-                        margin-top: 2rem;
-                        display: flex;
-                        align-items: center;
-
-                        div.left,
-                        div.text {
-                            vertical-align: top;
-                            display: inline-block;
-                        }
-                    }
-
-                    div.left {
-                        width: 212px;
-                        height: 212px;
-                        margin-right: 2rem;
-                        flex-shrink: 0;
-
-                        &.left1 {
-                            background: url(imgs/atardecer7.png) no-repeat center / cover;
-                        }
-                        &.left2 {
-                            background: url(imgs/atardecer8.png) no-repeat center / cover;
-                        }
-                        &.left3 {
-                            background: url(imgs/atardecer9.png) no-repeat center / cover;
-                        }
-                        &.left4 {
-                            background: url(imgs/atardecer10.png) no-repeat center / cover;
-                        }
-                    }
-
-                    div.text {
-                        width: 950px;
-                        text-align: left; /* Alineado a la izquierda para leer mejor los párrafos */
-                    }
-                }
-            }
+            margin: 0;
         }
 
-        /* Media Queries */
+        main {
+            padding: 1rem;
+            margin: 0 auto;
+            width: 1228px;
+        }
+
+        header figure.logo {
+            background: url(imgs/titulo.png) no-repeat center / cover;
+            padding: 0;
+            height: 300px;
+            margin: 0 auto;
+            width: 800px;
+        }
+
+        menu {
+            margin: 0;
+            padding: 0;
+        }
+
+        menu a:is(:link, :visited) {
+            background: url(imgs/atardecer1.png) no-repeat center / cover;
+            color: white;
+            font-size: 1.8rem;
+            padding: 1.4rem 1rem;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: top;
+            width: 279px;
+            height: 243px;
+            border-radius: 2rem;
+            margin: 0.5rem;
+            border: 6px solid white;
+        }
+
+        menu a:nth-of-type(2) {
+            background: url(imgs/atardecer2.png) no-repeat center / cover;
+        }
+
+        menu a:nth-of-type(3) {
+            background: url(imgs/atardecer3.png) no-repeat center / cover;
+        }
+
+        menu a:nth-of-type(4) {
+            background: url(imgs/atardecer4.png) no-repeat center / cover;
+        }
+
+        menu a:hover {
+            transform: translateY(10px);
+            color: pink;
+            font-weight: bold;
+            font-size: 3rem;
+            text-shadow: 2px 2px 2px #000;
+            box-shadow: 0 0 20px pink;
+        }
+
+        /* SECCIONES */
+
+        section article {
+            width: 100%;
+            height: 280px;
+            background: transparent;
+            color: white;
+            overflow: hidden;
+            margin: 2rem auto;
+            border-radius: 1.4rem;
+            text-align: center;
+        }
+
+        /* TITULOS */
+
+        section article h3 {
+            display: inline-block;
+            vertical-align: middle;
+            width: 15%;
+            color: #fff;
+            font-size: 28px;
+            margin: 0;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 2rem;
+        }
+
+        /* IMAGENES */
+
+        section article img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 26%;
+            height: 240px;
+            object-fit: cover;
+            object-position: center;
+            margin: 0;
+        }
+
+        /* TEXTOS */
+
+        section article p {
+            display: inline-block;
+            vertical-align: middle;
+            width: 57%;
+            text-transform: uppercase;
+            color: #fff;
+            text-align: justify;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        section article:first-of-type {
+            box-shadow: 0 0 40px 10px pink;
+        }
+
+        /* MEDIA QUERIES */
+
+        /* Breakpoint: 1288px */
 
         @media (max-width: 1288px) {
-            body {
-                main {
-                    width: 800px;
 
-                    header {
-                        figure.logo {
-                            background: url(imgs/atardecer5.png) no-repeat center / cover;
-                            height: 370px;
-                            width: 348px;
-                            background-size: 23rem;
-                        }
-
-                        menu {
-                            a:is(:link, :visited) {
-                                width: 300px;
-                            }
-                        }
-                    }
-                }
+            main {
+                width: 800px;
             }
+
+            header figure.logo {
+                background: url(imgs/atardecer5.png) no-repeat center / cover;
+                height: 200px;
+                width: 200px;
+            }
+
+            menu a:is(:link, :visited) {
+                width: 324px;
+            }
+
+            section article {
+                height: 280px;
+            }
+
+            section article h3 {
+                width: 15%;
+                font-size: 23px;
+            }
+
+            section article img {
+                width: 26%;
+                height: 220px;
+            }
+
+            section article p {
+                width: 57%;
+                font-size: 12px;
+            }
+
         }
 
-        /* Breakpoint para Celular */
-        @media (max-width: 1000px) {
-            body {
-                main {
-                    width: 360px;
+        /* Breakpoint: 860px (Celular) */
 
-                    header {
-                        figure.logo {
-                            background: url(imgs/atardecer6.png) no-repeat center / cover;
-                            height: 156px;
-                            width: 162px;
-                            background-size: 23rem;
-                        }
+        @media (max-width: 860px) {
 
-                        menu {
-                            a:is(:link, :visited) {
-                                display: block;
-                                margin-bottom: 0.8rem;
-                                width: 100%; /* Ajustado para que no rompa la pantalla del celular */
-                                height: 200px;
-                            }
-                        }
-                    }
-
-                    section {
-                        div.parent {
-                            flex-direction: column; /* Pone la imagen arriba y el texto abajo en celular */
-                            align-items: center;
-                            text-align: center;
-                        }
-
-                        div.left {
-                            margin-right: 0;
-                            margin-bottom: 1rem;
-                        }
-
-                        div.text {
-                            width: 100%;
-                            text-align: center;
-                        }
-                    }
-                }
+            main {
+                width: 360px;
             }
+
+            header figure.logo {
+                background: url(imgs/atardecer7.png) no-repeat center / contain;
+                height: 360px;
+                width: 100%;
+            }
+
+            menu a:is(:link, :visited) {
+                display: inline-block;
+                margin-bottom: 0.8rem;
+                width: 330px;
+                height: 300px;
+            }
+
+            section article {
+                height: auto;
+                overflow: visible;
+                text-align: center;
+                padding: 1.5rem;
+            }
+
+            section article h3 {
+                display: inline-block;
+                width: 100%;
+                font-size: 28px;
+                margin-bottom: 1rem;
+            }
+
+            section article img {
+                display: inline-block;
+                vertical-align: middle;
+                width: 220px;
+                height: 220px;
+                object-fit: contain;
+                object-position: center;
+                margin-bottom: 1rem;
+            }
+
+            section article p {
+                display: inline-block;
+                width: 100%;
+                font-size: 13px;
+                text-align: justify;
+            }
+
         }
+
     </style>
 </head>
 
 <body>
+
     <main>
+
         <header>
+
             <figure class="logo"></figure>
+
             <menu>
-                <a href="">Atardecer</a>
-                <a href="">Atardecer</a>
-                <a href="">Atardecer</a>
-                <a href="">Atardecer</a>
+                <a href="atardecer1">Atardecer</a>
+                <a href="atardecer2">Atardecer</a>
+                <a href="atardecer3">Atardecer</a>
+                <a href="atardecer4">Atardecer</a>
             </menu>
+
         </header>
 
         <section>
-            <div class="parent">
-                <div class="left left1"></div>
-                <div class="text">
-                    <h3>Atardecer</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error consectetur suscipit quibusdam! Debitis autem quod expedita eum? Officiis nulla earum, corrupti recusandae sint animi error!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium officiis pariatur ab quos ullam fugiat maiores.</p>
-                </div>
-            </div>
 
-            <div class="parent">
-                <div class="left left2"></div>
-                <div class="text">
-                    <h3>Atardecer</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error consectetur suscipit quibusdam! Debitis autem quod expedita eum?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, fuga libero repellat earum incidunt magni minima laudantium vitae?</p>
-                </div>
-            </div>
+            <article>
 
-            <div class="parent">
-                <div class="left left3"></div>
-                <div class="text">
-                    <h3>Atardecer</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error consectetur suscipit quibusdam! Debitis autem quod expedita eum?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius iure non aliquam quod vitae? Corrupti corporis nemo sit facere.</p>
-                </div>
-            </div>
+                <h3>Atardecer</h3>
 
-            <div class="parent">
-                <div class="left left4"></div>
-                <div class="text">
-                    <h3>Atardecer</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error consectetur suscipit quibusdam! Debitis autem quod expedita eum?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum recusandae soluta similique, delectus sunt necessitatibus.</p>
-                </div>
-            </div>
+                <img src="imgs/atardecer8.png" alt="">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quia dolorem voluptatum deleniti inventore animi sapiente odit, nihil voluptates esse unde voluptatibus ipsa ad alias totam facilis hic est eveniet? Voluptatum totam alias consectetur dolorem incidunt fugiat repudiandae, rem at in similique cumque inventore sunt natus itaque accusantium excepturi sit, enim, doloribus quasi velit doloremque! Incidunt odio atque enim delectus!</p>
+
+            </article>
+
         </section>
+
+        <section>
+
+            <article>
+
+                <h3>Atardecer</h3>
+
+                <img src="imgs/atardecer9.png" alt="">
+
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos fugiat eveniet ex illum obcaecati repellendus ipsa, amet, facilis, minima tempora nisi nesciunt quis iusto non. Aliquam est veritatis dolorem, repudiandae perspiciatis amet aut deserunt, illum, ea ab nesciunt animi corporis aspernatur distinctio necessitatibus ullam fugit. Cum amet adipisci, architecto et mollitia necessitatibus natus vero, atque, omnis repudiandae commodi magni molestias.</p>
+
+            </article>
+
+        </section>
+
+        <section>
+
+            <article>
+
+                <h3>Atardecer</h3>
+
+                <img src="imgs/atardecer10.png" alt="">
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique molestiae, error quis in beatae perferendis blanditiis culpa adipisci ipsa tempora id tempore suscipit doloribus aliquam eligendi labore ex, corrupti deleniti earum dolor dolorem autem quod. Est molestiae cupiditate recusandae delectus, dolores deleniti temporibus et magni ex velit minus omnis dolore aliquam quisquam tempora explicabo laboriosam officiis molestias eos, facilis repellendus.</p>
+
+            </article>
+
+        </section>
+
+        <section>
+
+            <article>
+
+                <h3>Atardecer</h3>
+
+                <img src="imgs/atardecer6.png" alt="">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cumque sequi, tempora iure recusandae facilis explicabo nesciunt nulla eaque tenetur, quasi doloremque fugiat! Maiores minima magnam laudantium illo cupiditate, voluptatum repudiandae accusantium velit doloribus obcaecati itaque veritatis similique ad officiis fugit, quibusdam tenetur ut optio aliquam a aperiam architecto quia adipisci quas. Porro doloremque dolorem voluptatum placeat, molestias est minima.</p>
+
+            </article>
+
+        </section>
+
     </main>
+
 </body>
 
 </html>
