@@ -8,19 +8,107 @@
     <link rel="stylesheet" href="../src/css/master.css">
     <style>
         section {
-            h3 {
+            h3.gallery {
                 display: none;
             }
+            div.gallery {
             display: grid;
-            grid-template-columns: 120px 1fr;
+            grid-template-areas: "one two three"
+                                 "four two five"
+                                 "six six seven";
+            grid-template-columns: 100px 1fr;
             grid-template-rows: auto;
+            grid-gap: 0.2rem;
 
             div {
                 width: 105px;
                 height: 105px;
-                border: 2px solid red;
+                background-color: red;
+                margin: 0.2 auto;
+            
+            &:first-child {
+            background: url(imgs/stich1.jpg) no-repeat center / cover;
+            grid-area: one;
+            
+            }
+            &:nth-child(2) {
+            grid-area: two;
+            background: url(imgs/stitch2.jpg)no-repeat center / cover;
+            height:215px;
+            width: 150px;
+            }
+           &:nth-child(3) {
+            grid-area: three;
+            background: url(imgs/stitch3.jpg)no-repeat center / cover;
+            }
+            &:nth-child(4) {
+            background: url(imgs/stitch4.jpg)no-repeat center / cover;
+            grid-area: four;
+            }
+            &:nth-child(5) {
+            grid-area: five;
+            background: url(imgs/stitch5.jpg)no-repeat center / cover;
+            }
+            &:nth-child(6) {
+            grid-area: six;
+            background: url(imgs/stitch6.jpg)no-repeat center / cover;
+            width: calc(250px + 0.2rem);
+
+            }
+            &:last-child {
+            grid-area: seven;
+            background: url(imgs/stitch7.jpg)no-repeat center / cover;
             }
         }
+    } 
+
+    div.gallery2 {
+            display: grid;
+            grid-template-areas: "one one two three"
+                                 "one one four four"
+                                 "five six four four";
+            grid-template-columns: 87px 87px 87px 87px;
+            grid-template-rows: 87px 87px 87px;
+            grid-gap: 0.2rem;   
+            width: 400px;
+            height: 280px;
+
+            div {
+                width: 100%;
+                height: 100%;
+                background-color: red;
+                margin: 0.3 auto;
+
+            &:first-child {
+            background: url(imgs/reto1.jpg) no-repeat center / cover;
+            grid-area: one;
+           
+            
+            }
+            &:nth-child(2) {
+            grid-area: two;
+            background: url(imgs/reto4.jpg)no-repeat center / cover;
+            }
+           &:nth-child(3) {
+            grid-area: three;
+            background: url(imgs/reto6.webp)no-repeat center / cover;
+            }
+            &:nth-child(4) {
+            background: url(imgs/reto2.jpg)no-repeat center / cover;
+            grid-area: four;
+            
+            }
+            &:nth-child(5) {
+            grid-area: five;
+            background: url(imgs/reto5.jpg)no-repeat center / cover;
+            }
+            &:last-child {
+            grid-area: six;
+            background: url(imgs/reto3.jpg)no-repeat center / cover;
+            }
+        }
+    }
+}
      
     </style>
 </head>
@@ -35,10 +123,11 @@
         <header class="mmenu internal">
          <h1>45-Challenge</h1>
            <img src="/03-css/imgs/logo-css.png">
-         <h3>Iregular Gallery</h3>
+         <h3>Irregular Gallery</h3>
         </header>
         <section>
-            <h3 class="subtitle">Gallery 01</h3>
+        <h3 class="subtitle">Gallery 01</h3>
+           <div class="gallery">
             <div></div>
             <div></div>
             <div></div>
@@ -46,6 +135,17 @@
             <div></div>
             <div></div>
             <div></div>
+            </div>
+
+        <h3 class="subtitle">Gallery 02</h3>
+        <div class="gallery2">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        </div>
         </section>
     </main>
 </body>
